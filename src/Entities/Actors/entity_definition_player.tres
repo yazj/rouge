@@ -10,4 +10,4 @@ region = Rect2(16, 112, 16, 16)
 [resource]
 script = ExtResource("1_55lf0")
 texture = SubResource("AtlasTexture_ag6m5")
-color = Color(0.760784, 0.615686, 0, 1)
+color = Color(1, 1, 1, 1)

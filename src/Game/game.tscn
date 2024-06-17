@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2ihwpcw3oaxp"]
+[gd_scene load_steps=6 format=3 uid="uid://d2ihwpcw3oaxp"]
 
 [ext_resource type="Script" path="res://src/Game/game.gd" id="1_0lowr"]
 [ext_resource type="Script" path="res://src/Map/dungeon_generator.gd" id="3_bxmf2"]
 [ext_resource type="Script" path="res://src/Map/map.gd" id="3_v886w"]
 [ext_resource type="Script" path="res://src/Game/event_handler.gd" id="3_wpekq"]
+[ext_resource type="Script" path="res://src/Map/field_of_view.gd" id="5_c05es"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_0lowr")
+
+[node name="EventHandler" type="Node" parent="."]
+script = ExtResource("3_wpekq")
 
 [node name="Map" type="Node2D" parent="."]
 script = ExtResource("3_v886w")
@@ -14,8 +18,8 @@ script = ExtResource("3_v886w")
 [node name="DungeonGenerator" type="Node" parent="Map"]
 script = ExtResource("3_bxmf2")
 
-[node name="EventHandler" type="Node" parent="."]
-script = ExtResource("3_wpekq")
+[node name="FieldOfView" type="Node" parent="Map"]
+script = ExtResource("5_c05es")
 
 [node name="Entities" type="Node2D" parent="."]
 

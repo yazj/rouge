@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxt04fsk16s6x"]
+
+[ext_resource type="SpriteFrames" uid="uid://bpc8ny61k76u" path="res://assets/sprite_frames/player_idle.tres" id="1_0mpiq"]
+[ext_resource type="Script" path="res://src/Game/game.gd" id="1_nkqx8"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_nkqx8")
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(790, 271)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("1_0mpiq")
+frame_progress = 0.63964
+centered = false

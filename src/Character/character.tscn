@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpvg1pa1fygtd"]
+
+[ext_resource type="Script" path="res://src/Character/character.gd" id="1_a8o0k"]
+[ext_resource type="Texture2D" uid="uid://d2td34mm5wew8" path="res://assets/resource/32rogues/rogues.png" id="2_wk0oa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cnmv"]
+atlas = ExtResource("2_wk0oa")
+region = Rect2(96, 0, 32, 32)
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_a8o0k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_0cnmv")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]

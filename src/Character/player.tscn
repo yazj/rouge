@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dts0jp6ghae7g"]
+
+[ext_resource type="Script" path="res://src/Character/player.gd" id="1_p8ybe"]
+[ext_resource type="SpriteFrames" uid="uid://dejqptroqsd1n" path="res://assets/sprite_frames/player_sprite_frames.tres" id="2_mkdaf"]
+[ext_resource type="Script" path="res://src/Game/EventHandler/input_handler.gd" id="3_wldjo"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_p8ybe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("2_mkdaf")
+frame_progress = 0.792924
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(160, 160)
+position_smoothing_speed = 10.0
+
+[node name="InputHandler" type="Node" parent="."]
+script = ExtResource("3_wldjo")
